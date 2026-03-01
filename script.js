@@ -1,8 +1,7 @@
 // ================================
 // ⏳ CONTADOR REGRESIVO
 // ================================
-const eventDate = new Date("2026-03-14T16:00:00").getTime();
-
+const eventDate = new Date('2026-03-14T16:00:00').getTime();
 const countdownEl = document.getElementById("countdown");
 
 setInterval(() => {
@@ -22,35 +21,25 @@ setInterval(() => {
 
 
 // ================================
-// 🌀 PARALLAX CON SCROLL
+// ☁️ PARALLAX CONTINUO (FONDO)
 // ================================
 const parallaxElements = document.querySelectorAll(".parallax");
 
 window.addEventListener("scroll", () => {
-  const scrolled = window.scrollY;
+  const scrolled = window.pageYOffset;
 
   parallaxElements.forEach(el => {
-    const speed = el.dataset.speed || 0.3;
+    const speed = parseFloat(el.dataset.speed) || 0.15;
     el.style.transform = `translateY(${scrolled * speed}px)`;
   });
 });
 
+// Ejecutar una vez al cargar
+window.addEventListener("load", () => {
+  const scrolled = window.pageYOffset;
 
-// ================================
-// 👶 REVEAL AL HACER SCROLL
-// ================================
-const revealElements = document.querySelectorAll(".reveal");
-
-const revealOnScroll = () => {
-  revealElements.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    const triggerPoint = window.innerHeight - 100;
-
-    if (top < triggerPoint) {
-      el.classList.add("active");
-    }
+  parallaxElements.forEach(el => {
+    const speed = parseFloat(el.dataset.speed) || 0.15;
+    el.style.transform = `translateY(${scrolled * speed}px)`;
   });
-};
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+});
