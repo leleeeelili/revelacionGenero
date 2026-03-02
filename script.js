@@ -20,17 +20,15 @@ setInterval(() => {
 }, 1000);
 
 
-// ================================
-// ☁️ PARALLAX CONTINUO (FONDO)
-// ================================
-const parallaxElements = document.querySelectorAll(".parallax");
+// ☁️ PARALLAX GLOBAL CONTINUO SOLO PARA NUBES
+const clouds = document.querySelectorAll(".cloud");
 
 window.addEventListener("scroll", () => {
-  const scrolled = window.pageYOffset;
+  const scrolled = window.scrollY;
 
-  parallaxElements.forEach(el => {
-    const speed = parseFloat(el.dataset.speed) || 0.15;
-    el.style.transform = `translateY(${scrolled * speed}px)`;
+  clouds.forEach(cloud => {
+    const speed = parseFloat(cloud.dataset.speed) || 0.1;
+    cloud.style.transform = `translateY(${scrolled * speed}px)`;
   });
 });
 

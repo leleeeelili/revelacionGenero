@@ -48,20 +48,20 @@ section {
 
 /* Nubes */
 .cloud {
+  position: fixed;
   width: 320px;
   z-index: 0;        /* las manda atrás */
   pointer-events: none;
-  user-select: none;
 }
 
 .cloud.left {
-  top: 8%;
-  left: -10px;
+  top: 10%;
+  left: -20px;
 }
 
 .cloud.right {
-  top: 28%;
-  right: -10px;
+  top: 40%;
+  right: -20px;
 }
 
 /* Confeti */
