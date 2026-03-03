@@ -35,8 +35,13 @@ section {
   overflow: hidden;
 }
 .hero {
-  min-height: 100vh;
+  min-height: 100vh;        /* ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centra vertical */
+  align-items: center;      /* centra horizontal */
 }
+
 /* ============================= */
 /* ELEMENTOS DECORATIVOS */
 /* ============================= */
@@ -231,12 +236,4 @@ p {
 .mensaje {
   padding-top: 200px;
   padding-bottom: 20px;
-}
-
-.hero {
-  min-height: 100vh;        /* ocupa toda la pantalla */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /* centra vertical */
-  align-items: center;      /* centra horizontal */
 }
