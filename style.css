@@ -15,10 +15,10 @@ body {
 
   background: linear-gradient(
     90deg,
-    #e8f4ff 0%,     /* celeste bebé */
+    #ddeaf5 0%,     /* celeste bebé */
     #f7f9ff 40%,    /* transición clara */
     #f9f2ff 60%,    /* lavanda muy suave */
-    #fff6fb 100%    /* neutro cálido */
+    #f3d9e8 100%    /* neutro cálido */
   );
 }
 
@@ -73,12 +73,7 @@ section {
   transform: translateX(-50%);
 }
 
-/* Globos */
-.balloons {
-  width: 220px;
-  bottom: -20px;
-  right: -20px;
-}
+
 
 /* ============================= */
 /* CONTENIDO */
@@ -234,6 +229,14 @@ p {
 }
 
 .mensaje {
-  padding-top: 20px;
+  padding-top: 200px;
   padding-bottom: 20px;
+}
+
+.hero {
+  min-height: 100vh;        /* ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centra vertical */
+  align-items: center;      /* centra horizontal */
 }
