@@ -27,15 +27,16 @@ body {
 /* ============================= */
 
 section {
-  min-height: 100vh;
-  padding: 60px 20px;
+  padding: 90px 20px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
 }
-
+.hero {
+  min-height: 100vh;
+}
 /* ============================= */
 /* ELEMENTOS DECORATIVOS */
 /* ============================= */
@@ -55,19 +56,19 @@ section {
 }
 
 .cloud.left {
-  top: 10%;
+  top: -12%;
   left: -20px;
 }
 
 .cloud.right {
-  top: 40%;
+  top: 20%;
   right: -20px;
 }
 
 /* Confeti */
 .confetti {
   width: 200px;
-  top: 5%;
+  top: 0%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -194,4 +195,45 @@ p {
   .confetti {
     width: 160px;
   }
+}
+
+/* ============================= */
+/* SECCIÓN PREFERENCIAS */
+/* ============================= */
+
+.preferencias {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.baby-option {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.preferencias h2 {
+  font-size: 1.5rem;
+}
+/* ============================= */
+/* ICONO UBICACIÓN */
+/* ============================= */
+
+.ubicacion-titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.icono-ubicacion {
+  width: 40px;
+  color: #8074e9; /* puedes cambiar a rosado si qsuieres */
+}
+
+.mensaje {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
